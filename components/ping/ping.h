@@ -38,8 +38,6 @@ class PingSensor : public sensor::Sensor, public PollingComponent {
   void set_packet_loss_sensor(sensor::Sensor *packet_loss_sensor) { packet_loss_sensor_ = packet_loss_sensor; }
   void set_latency_sensor(sensor::Sensor *latency_sensor) { latency_sensor_ = latency_sensor; }
 
- private:
- protected:
   int latest_latency = -1;
   int timeout = 1000;
   int n_packet = 13;
